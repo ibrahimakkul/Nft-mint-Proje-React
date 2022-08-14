@@ -44,7 +44,9 @@ const Minter = (props) => {
 
 
 
-  useEffect(async () => {
+  useEffect( 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    async () => {
     const { address, status } = await getCurrentWalletConnected();
     setWallet(address)
     setStatus(status);

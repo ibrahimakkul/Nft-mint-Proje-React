@@ -22,6 +22,7 @@ export const mintNFT = async(url, name, description,price) => {
 
     }
    
+    // eslint-disable-next-line eqeqeq
     if ((url.trim() == "" || price.trim() =="") || (name.trim() == "" || description.trim() == "")) { 
         return {
             success: false,
@@ -31,6 +32,7 @@ export const mintNFT = async(url, name, description,price) => {
    
 
     //make metadata
+    // eslint-disable-next-line no-new-object
     const metadata = new Object();
     metadata.name = name;
     metadata.image = url;
